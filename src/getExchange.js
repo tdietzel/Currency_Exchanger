@@ -1,3 +1,5 @@
+import printError from "./index";
+
 export default class Exchange {
   static async getCurrencyRates() {
     try {
@@ -7,7 +9,7 @@ export default class Exchange {
       }
       return await response.json();
     } catch (error) {
-      document.querySelector("p#errorHandling").innerText = `Error Name: ${error.name} \n Error Message: ${error.message}`;
+      printError(error);
       return error;
     }
   }

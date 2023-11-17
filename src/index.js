@@ -3,7 +3,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Exchange from './getExchange';
 
-function getExchangeRate(selectedExchangeTo, response) {
+// UI
+export default function printError(error) {
+  document.querySelector("p#errorHandling").innerText = `Error Name: ${error.name} \n Error Message: ${error.message}`;
+}
+
+function printResults(result) {
+  document.querySelector("p#results").innerText = result;
+}
+
+// Business Logic
+
+function calculateExchange(selectedExchangeTo, response) {
   const currencyAmount = document.querySelector("input#userCurrencyAmount").value;
   switch (selectedExchangeTo) {
   case 'AED': return currencyAmount * response.conversion_rates.AED;
@@ -14,16 +25,16 @@ function getExchangeRate(selectedExchangeTo, response) {
   }
 }
 
-function printCurrencyRate(response) {
+function getExchangeRate(response) {
   const selectedExchangeTo = document.querySelector("#exchangeToDropDown").value;
-  const result = getExchangeRate(selectedExchangeTo, response);
-  document.querySelector("p#results").innerText = result;
+  const result = calculateExchange(selectedExchangeTo, response);
+  printResults(result);
 }
 
 async function getExchangeDetails() {
   try {
     const response = await Exchange.getCurrencyRates();
-    printCurrencyRate(response);
+    getExchangeRate(response);
   } catch (error) {
     document.querySelector("p#results").innerText = `Error: ${error.message}`;
   }
