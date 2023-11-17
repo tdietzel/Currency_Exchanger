@@ -7,9 +7,9 @@
 </head>
 <body>
     <h3>Exchange USD to currencies around the world!</h3>
-    <form>
+    <form id="getExchange">
         <h6>Amount in USD $</h6>
-        <input type="number" id="userCurrency">
+        <input type="number" id="userCurrencyAmount">
         <br>
         <h6>Exchange To:</h6>
         <select name="exchangeToDropDown" id="exchangeToDropDown">
@@ -19,7 +19,7 @@
             <option value="AMD">AMD</option>
             <option value="ANG">ANG</option>
         </select>
-        <button>Go!</button>
+        <button type="submit">Go!</button>
         <p id="results"></p>
     </form>
 </body>
