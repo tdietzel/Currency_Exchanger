@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Exchange</title>
 </head>
 <body>
-    
+    <h3>Exchange USD to currencies around the world!</h3>
+    <form>
+        <h6>Amount in USD $</h6>
+        <input type="number" id="userCurrency">
+        <br>
+        <h6>Exchange To:</h6>
+        <select name="exchangeToDropDown" id="exchangeToDropDown">
+            <option value="AED">AED</option>
+            <option value="AFN">AFN</option>
+            <option value="ALL">ALL</option>
+            <option value="AMD">AMD</option>
+            <option value="ANG">ANG</option>
+        </select>
+        <button>Go!</button>
+        <p id="results"></p>
+    </form>
 </body>
 </html>
