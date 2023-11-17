@@ -13,6 +13,9 @@ function printResults(result) {
   document.querySelector("p#results").innerText = result;
 }
 
+// Business Logic
+let response = null;
+
 function getExchangeRate(response) {
   const selectedExchangeTo = document.querySelector("#exchangeToDropDown").value;
   const result = calculateExchange(selectedExchangeTo, response);
@@ -21,7 +24,9 @@ function getExchangeRate(response) {
 
 async function getExchangeDetails() {
   try {
-    const response = await Exchange.getCurrencyRates();
+    if(!response) {
+      response = await Exchange.getCurrencyRates();
+    }
     getExchangeRate(response);
   } catch (error) {
     document.querySelector("p#results").innerText = `Error: ${error.message}`;
