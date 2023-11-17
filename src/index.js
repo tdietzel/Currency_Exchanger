@@ -20,17 +20,12 @@ function printCurrencyRate(response) {
   document.querySelector("p#results").innerText = result;
 }
 
-function printError() {
-  document.querySelector("p#results").innerText = "Error";
-}
-
 async function getExchangeDetails() {
-  const response = await Exchange.getCurrencyRates();
-
-  if(!response) {
-    printError();
-  } else {
+  try {
+    const response = await Exchange.getCurrencyRates();
     printCurrencyRate(response);
+  } catch (error) {
+    document.querySelector("p#results").innerText = `Error: ${error.message}`;
   }
 }
 
