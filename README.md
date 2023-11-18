@@ -22,6 +22,9 @@ The primary functionality of the application includes:
 - Error handling to provide clear messages in case of issues during the conversion process.
 - Includes all 161 circulating world currencies
 
+## Demo
+You can try out the live demo of the Exchange Web Application [here](https://tdietzel22.github.io/Currency_Exchanger/).
+
 ## Technologies Used
 - HTML
 - CSS (Bootstrap for styling)
