@@ -25,7 +25,8 @@ function getExchangeRate(response) {
 async function getExchangeDetails() {
   try {
     if(!response) {
-      response = await Exchange.getCurrencyRates();
+      const selectedExchangeFrom = document.querySelector("#exchangeFromDropDown").value;
+      response = await Exchange.getCurrencyRates(selectedExchangeFrom);
     }
     getExchangeRate(response);
   } catch (error) {
