@@ -14,12 +14,13 @@
 
 ## About
 
-Currency Exchange is a web application that allows users to convert an amount in US dollars (USD) to various currencies around the world. The application provides a user-friendly interface for entering the amount in USD, selecting the target currency, and obtaining the converted amount.
+Currency Exchange is a web application that allows users to convert an amount in any of the 161 commonly circulating world currencies to other various currencies around the world. The application provides a user-friendly interface for entering the amount, selecting the target currencies, and obtaining the converted amount.
 
 The primary functionality of the application includes:
 - Real-time currency conversion using the ExchangeRate-API.
 - User-friendly interface with input fields and dropdowns for ease of use.
 - Error handling to provide clear messages in case of issues during the conversion process.
+- Includes all 161 circulating world currencies
 
 ## Technologies Used
 - HTML
