@@ -23,7 +23,7 @@ The primary functionality of the application includes:
 - Includes all 161 circulating world currencies
 
 ## Demo
-You can try out the live demo of the Exchange Web Application [here](https://tdietzel22.github.io/Currency_Exchanger/).
+You can try out the live demo of the Exchange Web Application [here](https://tdietzel.github.io/Currency_Exchanger/).
 
 ## Technologies Used
 - HTML
@@ -74,10 +74,11 @@ Follow these steps to set up the project locally:
 ## Usage
 
 To use the Currency Exchange application:
-1. Enter the amount in USD in the provided input field.
-2. Select the desired currency to convert to from the dropdown menu.
-3. Click the 'Go!' button to initiate the conversion process.
-4. View the converted amount below the form. In case of any errors, an error message will be displayed.
+1. Enter the amount in a currency in the provided input field.
+2. Select the desired currency to convert from using the dropdown menu.
+3. Select the desired currency to convert to using the dropdown menu.
+4. Click the 'Go!' button to initiate the conversion process.
+5. View the converted amount below the form. In case of any errors, an error message will be displayed.
 
 ## Contributing
 
